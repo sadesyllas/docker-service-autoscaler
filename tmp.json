@@ -1,0 +1,104 @@
+{
+    "ID": "qpznj25vw1pi8qcd904ltes7i",
+    "Version": {
+        "Index": 1293
+    },
+    "CreatedAt": "2017-07-21T18:12:09.41232347Z",
+    "UpdatedAt": "2017-07-21T18:46:35.130606631Z",
+    "Labels": {},
+    "Spec": {
+        "ContainerSpec": {
+            "Image": "portainer/portainer:latest@sha256:e994817383ae1da528184b99f14746cf2196ee115f0100ebd0ae7437ee50d829",
+            "Args": [
+                "-H",
+                "unix:///var/run/docker.sock"
+            ],
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "//var/run/docker.sock",
+                    "Target": "/var/run/docker.sock"
+                }
+            ],
+            "DNSConfig": {}
+        },
+        "Resources": {
+            "Limits": {},
+            "Reservations": {}
+        },
+        "RestartPolicy": {
+            "Condition": "any",
+            "MaxAttempts": 0
+        },
+        "Placement": {
+            "Constraints": [
+                "node.role == manager"
+            ]
+        },
+        "ForceUpdate": 0
+    },
+    "ServiceID": "jl6f19u4r6izic8hvj3fb97bz",
+    "Slot": 1,
+    "NodeID": "8pfmvvwl0gpgud59wz22gv7bw",
+    "Status": {
+        "Timestamp": "2017-07-21T18:46:35.004796057Z",
+        "State": "shutdown",
+        "Message": "shutdown",
+        "ContainerStatus": {
+            "ContainerID": "14e714ccd7044e50ee43ad74882d506eacba90aa2bd8467c8b605c7a70c4f459",
+            "ExitCode": 2
+        },
+        "PortStatus": {}
+    },
+    "DesiredState": "shutdown",
+    "NetworksAttachments": [
+        {
+            "Network": {
+                "ID": "wor7fn9guoq9mb1h3lp80gxus",
+                "Version": {
+                    "Index": 1265
+                },
+                "CreatedAt": "2017-06-10T16:45:25.726676082Z",
+                "UpdatedAt": "2017-07-21T18:12:09.383880834Z",
+                "Spec": {
+                    "Name": "ingress",
+                    "Labels": {
+                        "com.docker.swarm.internal": "true"
+                    },
+                    "DriverConfiguration": {},
+                    "Ingress": true,
+                    "IPAMOptions": {
+                        "Driver": {},
+                        "Configs": [
+                            {
+                                "Subnet": "10.255.0.0/16",
+                                "Gateway": "10.255.0.1"
+                            }
+                        ]
+                    },
+                    "Scope": "swarm"
+                },
+                "DriverState": {
+                    "Name": "overlay",
+                    "Options": {
+                        "com.docker.network.driver.overlay.vxlanid_list": "4096"
+                    }
+                },
+                "IPAMOptions": {
+                    "Driver": {
+                        "Name": "default"
+                    },
+                    "Configs": [
+                        {
+                            "Subnet": "10.255.0.0/16",
+                            "Gateway": "10.255.0.1"
+                        }
+                    ]
+                }
+            },
+            "Addresses": [
+                "10.255.0.2/16"
+            ]
+        }
+    ]
+}
